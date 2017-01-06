@@ -9,8 +9,8 @@
       <p class="lead">Narrow results:</p>
 
         <div class="form-group">
-    <%= f.label :name_cont, "Name contains" %>
-    <%= f.text_field :name_cont, :class => "form-control", :placeholder => "Name contains" %>
+    <%= f.label :neighborhodname_cont, "Neighborhodname contains" %>
+    <%= f.text_field :neighborhodname_cont, :class => "form-control", :placeholder => "Neighborhodname contains" %>
   </div>
 
 <div class="form-group">
@@ -69,13 +69,13 @@
   <div class="col-md-12">
     <table class="table table-striped table-hover">
       <tr>
-        <th>Name</th>
+        <th>Neighborhodname</th>
         <th>Actions</th>
       </tr>
 
       <% @neighborhoods.each do |neighborhood| %>
       <tr>
-        <td><%= neighborhood.name %></td>
+        <td><%= neighborhood.neighborhodname %></td>
         <td>
           <a href="/neighborhoods/<%= neighborhood.id %>" class="btn btn-primary">Show</a>
           <a href="/neighborhoods/<%= neighborhood.id %>/edit" class="btn btn-warning">Edit</a>

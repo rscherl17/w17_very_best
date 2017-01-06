@@ -22,6 +22,7 @@ class CuisinesController < ApplicationController
   def create
     @cuisine = Cuisine.new
 
+    @cuisine.cuisinename = params[:cuisinename]
 
     save_status = @cuisine.save
 
@@ -48,6 +49,7 @@ class CuisinesController < ApplicationController
   def update
     @cuisine = Cuisine.find(params[:id])
 
+    @cuisine.cuisinename = params[:cuisinename]
 
     save_status = @cuisine.save
 

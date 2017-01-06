@@ -78,19 +78,19 @@
           Cuisine
         </label>
 
-        <%= select_tag(:cuisine_id, options_from_collection_for_select(Cuisine.all, :id, :created_at), :class => "form-control") %>
+        <%= select_tag(:cuisine_id, options_from_collection_for_select(Cuisine.all, :id, :cuisinename), :class => "form-control") %>
       </div>
 
       <!-- Label and input for meal_id -->
       <input type="hidden" name="meal_id" value="<%= @meal.id %>">
 
-      <!-- Label and input for name -->
+      <!-- Label and input for dishname -->
       <div class="form-group">
-        <label for="name" class="control-label">
-          Name
+        <label for="dishname" class="control-label">
+          Dishname
         </label>
 
-        <input type="text" id="name" name="name" placeholder="Name" class="form-control" value="">
+        <input type="text" id="dishname" name="dishname" placeholder="Dishname" class="form-control" value="">
       </div>
 
       <button class="btn btn-block btn-success">

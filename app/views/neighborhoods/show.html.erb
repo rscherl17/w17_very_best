@@ -5,8 +5,8 @@
 <div class="row">
   <div class="col-md-12 mb-2">
     <dl class="dl-horizontal">
-      <dt>Name</dt>
-      <dd><%= @neighborhood.name %></dd>
+      <dt>Neighborhodname</dt>
+      <dd><%= @neighborhood.neighborhodname %></dd>
 
     </dl>
 
@@ -60,13 +60,13 @@
       <!-- Label and input for neighborhood_id -->
       <input type="hidden" name="neighborhood_id" value="<%= @neighborhood.id %>">
 
-      <!-- Label and input for name -->
+      <!-- Label and input for restaurantname -->
       <div class="form-group">
-        <label for="name" class="control-label">
-          Name
+        <label for="restaurantname" class="control-label">
+          Restaurantname
         </label>
 
-        <input type="text" id="name" name="name" placeholder="Name" class="form-control" value="">
+        <input type="text" id="restaurantname" name="restaurantname" placeholder="Restaurantname" class="form-control" value="">
       </div>
 
       <button class="btn btn-block btn-success">
