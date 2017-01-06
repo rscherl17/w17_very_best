@@ -18,13 +18,13 @@
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
-      <!-- Label and input for name -->
+      <!-- Label and input for neighborhodname -->
       <div class="form-group">
-        <label for="name" class="control-label">
-          Name
+        <label for="neighborhodname" class="control-label">
+          Neighborhodname
         </label>
 
-        <input type="text" id="name" name="name" placeholder="Name" class="form-control" value="<%= @neighborhood.name %>">
+        <input type="text" id="neighborhodname" name="neighborhodname" placeholder="Neighborhodname" class="form-control" value="<%= @neighborhood.neighborhodname %>">
       </div>
 
       <button class="btn btn-success">

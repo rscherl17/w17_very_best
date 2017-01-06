@@ -24,7 +24,7 @@ class DishesController < ApplicationController
 
     @dish.cuisine_id = params[:cuisine_id]
     @dish.meal_id = params[:meal_id]
-    @dish.name = params[:name]
+    @dish.dishname = params[:dishname]
 
     save_status = @dish.save
 
@@ -53,7 +53,7 @@ class DishesController < ApplicationController
 
     @dish.cuisine_id = params[:cuisine_id]
     @dish.meal_id = params[:meal_id]
-    @dish.name = params[:name]
+    @dish.dishname = params[:dishname]
 
     save_status = @dish.save
 

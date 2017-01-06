@@ -24,16 +24,16 @@
           Neighborhood
         </label>
 
-        <%= select_tag(:neighborhood_id, options_from_collection_for_select(Neighborhood.all, :id, :name, @venue.neighborhood_id), :class => "form-control") %>
+        <%= select_tag(:neighborhood_id, options_from_collection_for_select(Neighborhood.all, :id, :neighborhodname, @venue.neighborhood_id), :class => "form-control") %>
       </div>
 
-      <!-- Label and input for name -->
+      <!-- Label and input for restaurantname -->
       <div class="form-group">
-        <label for="name" class="control-label">
-          Name
+        <label for="restaurantname" class="control-label">
+          Restaurantname
         </label>
 
-        <input type="text" id="name" name="name" placeholder="Name" class="form-control" value="<%= @venue.name %>">
+        <input type="text" id="restaurantname" name="restaurantname" placeholder="Restaurantname" class="form-control" value="<%= @venue.restaurantname %>">
       </div>
 
       <button class="btn btn-warning">

@@ -9,8 +9,8 @@
       <p class="lead">Narrow results:</p>
 
         <div class="form-group">
-    <%= f.label :name_cont, "Name contains" %>
-    <%= f.text_field :name_cont, :class => "form-control", :placeholder => "Name contains" %>
+    <%= f.label :dishname_cont, "Dishname contains" %>
+    <%= f.text_field :dishname_cont, :class => "form-control", :placeholder => "Dishname contains" %>
   </div>
 
 <div class="form-group">
@@ -54,44 +54,9 @@
       </script>
 
         <div class="form-group">
-          <%= f.label :created_at, "Cuisine Created at" %>
-          <div class="row">
-            <div class='col-md-6 mb-1'>
-              <div class='input-group date' id='cuisinegteqcreated_atPicker'>
-                  <%= f.text_field :cuisine_created_at_gteq, :class => "form-control", :placeholder => "Cuisine Created at greater than or equal to" %>
-                  <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
-                  </span>
-              </div>
-            </div>
-
-            <div class='col-md-6'>
-              <div class='input-group date' id='cuisinelteqcreated_atPicker'>
-                  <%= f.text_field :cuisine_created_at_lteq, :class => "form-control", :placeholder => "Cuisine Created at less than or equal to" %>
-                  <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
-                  </span>
-              </div>
-            </div>
-          </div>
-      </div>
-      <script type="text/javascript">
-          $(function () {
-              $('#cuisinegteqcreated_atPicker').datetimepicker({
-                  format: 'YYYY-MM-DD hh:mm:SS'
-              });
-              $('#cuisinelteqcreated_atPicker').datetimepicker({
-                  useCurrent: false,
-                  format: 'YYYY-MM-DD hh:mm:SS'
-              });
-              $('#cuisinegteqcreated_atPicker').on("dp.change", function (e) {
-                  $('#cuisinelteqcreated_atPicker').data("DateTimePicker").minDate(e.date);
-              });
-              $('#cuisinelteqcreated_atPicker').on("dp.change", function (e) {
-                  $('#cuisinegteqcreated_atPicker').data("DateTimePicker").maxDate(e.date);
-              });
-          });
-      </script>
+      <%= f.label :cuisine_cuisinename_cont, "Cuisine cuisinename contains" %>
+      <%= f.text_field :cuisine_cuisinename_cont, :class => "form-control", :placeholder => "Cuisine cuisinename contains" %>
+    </div>
 
       <%= f.submit :class => "btn btn-primary btn-block mb-1" %>
 
@@ -109,7 +74,7 @@
       <tr>
         <th>Cuisine</th>
         <th>Meal</th>
-        <th>Name</th>
+        <th>Dishname</th>
         <th>Actions</th>
       </tr>
 
@@ -118,7 +83,7 @@
         <td>
           <% if dish.cuisine.present? %>
             <a href="/cuisines/<%= dish.cuisine.id %>">
-              <%= dish.cuisine.created_at %>
+              <%= dish.cuisine.cuisinename %>
             </a>
           <% end %>
         </td>
@@ -129,7 +94,7 @@
             </a>
           <% end %>
         </td>
-        <td><%= dish.name %></td>
+        <td><%= dish.dishname %></td>
         <td>
           <a href="/dishes/<%= dish.id %>" class="btn btn-primary">Show</a>
           <a href="/dishes/<%= dish.id %>/edit" class="btn btn-warning">Edit</a>

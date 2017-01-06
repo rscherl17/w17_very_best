@@ -22,7 +22,7 @@ class NeighborhoodsController < ApplicationController
   def create
     @neighborhood = Neighborhood.new
 
-    @neighborhood.name = params[:name]
+    @neighborhood.neighborhodname = params[:neighborhodname]
 
     save_status = @neighborhood.save
 
@@ -49,7 +49,7 @@ class NeighborhoodsController < ApplicationController
   def update
     @neighborhood = Neighborhood.find(params[:id])
 
-    @neighborhood.name = params[:name]
+    @neighborhood.neighborhodname = params[:neighborhodname]
 
     save_status = @neighborhood.save
 
