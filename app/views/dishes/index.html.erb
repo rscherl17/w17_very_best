@@ -17,7 +17,7 @@
 
       <% @dishes.each do |dish| %>
       <tr>
-        <td><%= dish.cuisine_id %></td>
+        <td><%= dish.cuisine.created_at %></td>
         <td><%= dish.meal_id %></td>
         <td><%= dish.name %></td>
         <td>
